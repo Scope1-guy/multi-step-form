@@ -1,0 +1,80 @@
+body.dark-mode{
+    background-color: hsl(220, 82%, 4%);
+}
+body.dark-mode .whole-box{
+    background-color: rgb(0, 0, 0);
+}
+body.dark-mode .form-box-header, body.dark-mode .form-box-info, body.dark-mode .form-to-fill, body.dark-mode .label{
+    color: hsl(0, 0%, 100%);
+}
+body.dark-mode .input{
+    background-color: hsl(222, 16%, 16%);
+    border: none;
+}
+body.dark-mode .next-step{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(222, 16%, 16%);
+}
+body.dark-mode .steps-box{
+    background: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.692)), url(../assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    height: 66vh;
+}
+body.dark-mode .step-number.active-step{
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+}
+body.dark-mode .plan-name, body.dark-mode .plan-price,  body.dark-mode .yearly-option-dropdown{
+    color: rgb(255, 255, 255);
+}
+body.dark-mode .plan-duration-container{
+    background-color: hsl(220, 82%, 4%);
+}
+body.dark-mode .yearly, body.dark-mode .monthly{
+    color: hsl(0, 0%, 100%);
+}
+body.dark-mode .checkbox:checked + .slider{
+    background-color: rgb(44, 44, 44);
+}
+body.dark-mode .slider{
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+}
+body.dark-mode .go-back-btn{
+    color: hsl(0, 0%, 100%);
+}
+body.dark-mode .add-ons-option-1-title, body.dark-mode .add-ons-option-1-info, body.dark-mode .add-ons-option-1-price {
+    color: hsl(0, 0%, 100%);
+}
+body.dark-mode .add-ons-options{
+    border: 1px solid gray;
+}
+body.dark-mode .finishing-up-table{
+    background-color: hsl(220, 82%, 4%);
+}
+body.dark-mode .total-plan-amount, body.dark-mode .plan-monthly-plan-name, body.dark-mode .plan-monthly-plan-price{
+    color: hsl(0, 0%, 100%);
+}
+body.dark-mode .thank-you-message{
+    color: white;
+}
+body.dark-mode .thank-you, body.dark-mode .thank-you-message a {
+    color: wheat;
+}
+
+@media (max-width: 768px) {
+    body.dark-mode .steps-box {
+        background-image: url(../assets/images/bg-sidebar-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+}

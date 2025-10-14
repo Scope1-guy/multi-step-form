@@ -1,0 +1,103 @@
+body.red-mode{
+    background-color: rgb(214, 0, 0);
+}
+body.red-mode .whole-box{
+    box-shadow: 5px 5px 10px rgb(231, 41, 41);
+    background-color: rgb(49, 0, 0);
+}
+body.red-mode .form-box-header, body.red-mode .form-box-info, body.red-mode .form-to-fill, body.red-mode .label, body.red-mode .plan-name, body.red-mode .plan-price,  body.red-mode .yearly-option-dropdown{
+    color: #FF3B30;
+}
+body.red-mode .input{
+    background-color: #8B0000;;
+    border: none;
+}
+body.red-mode .next-step{
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 100%, 50%);
+}
+body.red-mode .steps-box{
+    background: linear-gradient(rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.842)), url(../assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    height: 66vh;
+}
+body.red-mode .step-number.active-step{
+    background-color: rgb(66, 0, 0);
+    color: hsl(0, 0%, 100%);
+    border: rgb(66, 0, 0);
+}
+body.red-mode .plan-duration-container{
+    background-color: rgb(214, 0, 0);
+}
+body.red-mode .yearly, body.red-mode .monthly{
+    color: rgb(49, 0, 0);
+}
+body.red-mode .checkbox:checked + .slider{
+    background-color: rgb(129, 26, 26);
+}
+body.red-mode .slider{
+    background-color: rgb(49, 0, 0);
+}
+body.red-mode .go-back-btn{
+    color: rgb(214, 0, 0);
+}
+body.red-mode .add-ons-option-1-title, body.red-mode .add-ons-option-1-info, body.red-mode .add-ons-option-1-price {
+    color: rgb(214, 0, 0);
+}
+body.red-mode .add-ons-options{
+    border: 1px solid rgb(255, 0, 0);
+}
+/*  */
+body.red-mode .add-ons-checkbox{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    background-color: red;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .18s ease;
+}
+body.red-mode .add-ons-checkbox:checked{
+    background-color: #8d1e18;
+    box-shadow: 0 6px 18px rgba(215, 38, 61, 0.25);
+}
+body.red-mode .add-ons-checkbox:focus{
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.12);
+}
+/*  */
+body.red-mode .finishing-up-table{
+    background-color: rgb(214, 0, 0);
+}
+body.red-mode .total-plan-amount, body.red-mode .plan-monthly-plan-change{
+    color: rgb(49, 0, 0);
+}
+body.red-mode  .plan-total-amt{
+    color: rgba(165, 0, 0);
+}
+body.red-mode .thank-you-message{
+    color: rgba(165, 0, 0);
+}
+body.red-mode .thank-you, body.red-mode .thank-you-message a{
+    color: #FF3B30;
+}
+
+@media (max-width: 768px) {
+    body.red-mode .steps-box {
+        background-image: url(../assets/images/bg-sidebar-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+}

@@ -1,0 +1,528 @@
+body{
+    margin: 0;
+    background-color: hsl(218, 100%, 97%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* slider beginning */
+.theme-switcher{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-left: 29px;
+    margin-top: 6px;
+}
+.theme-switcher input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* moving the circle to the right when active */
+input:checked + .slider::before{
+    transform: translateX(30px);
+}
+/* slider ending */
+.whole-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px gray;
+    background-color: rgb(255, 255, 255);
+}
+/* CLOSURE/HIDING OF EACH BOXES */
+.step-1-box{
+    display: block;
+}
+.step-2-box{
+    display: none;
+}
+.step-3-box{
+    display: none;
+}
+.step-4-box{
+    display: none;
+}
+/* ... */
+.steps-box{
+    background-image: url(../assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    height: 66vh;
+    border-radius: 10px;
+    padding-right: 60px;
+}
+.steps{
+    margin: 30px;
+}
+.steps-list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.step-number{
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.step-number.active-step{
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+}
+.step-info-step, .step-info-step-info{
+    margin: 5px;
+}
+.step-info-step{
+    font-weight: 200;
+}
+.step-info-step-info{
+    font-weight: 600;
+}
+
+/* FORM BOX */
+.step-two-yearly{
+    display: none;
+}
+
+.form-box{
+    margin: 30px;
+    padding-left: 60px;
+    padding-right: 50px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    height: 62vh;
+    width: 36vw;
+}
+.form-box-header{
+    margin: 0;
+    font-size: 40px;
+    color: hsl(213, 96%, 18%);
+}
+.form-box-info{
+    color: hsl(231, 11%, 63%);
+    margin-top: 10px;
+    font-size: 20px;
+}
+.form-to-fill{
+    margin-top: 70px;
+}
+.label{
+    font-size: 15px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+.input{
+    color: hsl(0, 0%, 0%);
+    width: 100%;
+    height: 2vh;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 7px;
+    border: 1px solid rgb(190, 190, 190);
+    font-weight: 600;
+    font-size: 17px;   
+}
+.next-step{
+    padding: 14px 26px;
+    font-weight: 700;
+    border-radius: 9px;
+    border: transparent;
+    background-color: rgb(0, 0, 70);
+    color: white;
+    font-size: 14px;
+    float: right;
+}
+
+
+/* STEP TWO STYLING*/
+.step-2-info{
+    font-size: 23px;
+}
+.plans-option{
+    width: 180px;
+    height: 165px;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(124, 124, 173, 0.349);
+}
+.plans-option-yearly{
+    height: 185px;
+}
+.plan-name{
+    font-size: 20px;
+    margin: 0;
+    margin-top: 60px;
+    color: rgb(0, 0, 70);
+}
+.plan-price{
+    margin: 0;
+    color: rgb(100, 100, 179);
+    font-size: 17px;
+}
+.yearly-option-dropdown{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 10px;
+}
+.plans{
+    display: flex;
+    gap: 35px;
+}
+
+/* THE SWITCH STYLING */
+.plan-duration-switch{
+    position: relative;
+    display: inline-block;
+    width: 49px;
+    height: 26px;
+}
+.checkbox{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: -4px;
+    bottom: 0;
+    background-color: rgb(0, 0, 70);;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+.checkbox:checked + .slider{
+    background-color: blue;
+}
+.checkbox:checked + .slider:before{
+    transform: translateX(26px);
+}
+/* SWITCH STYLING  ENDING */
+
+.plan-duration-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(238, 234, 234);
+    margin-top: 30px;
+    justify-content: center;
+}
+.monthly, .yearly{
+    font-size: 16px;
+    color: rgb(0, 0, 70);
+    font-weight: 600;
+}
+.step-2-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.go-back-btn{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* STEP THREE STYLING*/
+.yearly-add-ons-options{
+    display: block;
+}
+.add-ons-options{
+    border: 1px solid darkblue;
+    display: flex;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 30px;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+.add-ons-checkbox{
+    width: 25px;
+    height: 25px;
+}
+.add-ons-option-1-title{
+    font-size: 23px;
+    margin: 0;
+    color: rgb(0, 0, 70);
+}
+.add-ons-option-1-info{
+    margin: 0;
+    color: rgb(90, 90, 151);
+    font-size: 18px;
+}
+.add-ons-option-1-price{
+    margin-left: auto;
+    margin-right: 30px;
+    color: rgb(90, 90, 151);
+}
+.step-3-footer{
+    margin-top: 100px;
+}
+
+/* STEP FOUR STYLING*/
+.finishing-up-table{
+    background-color: rgb(244, 244, 247);
+    padding: 20px;
+    border-radius: 10px;
+}
+.plan-monthly-plan-name{
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: black;
+}
+.plan-table{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.plan-monthly-plan-price{
+    font-weight: 700;
+}
+.plan-monthly-plan-options{
+    display: flex;
+    justify-content: space-between;
+}
+.total-plan-amount{
+    font-weight: 300;
+    color: rgb(158, 158, 158);
+}
+.total-plan-table{
+    width: 94%;
+    justify-content: normal;
+    justify-self: center;
+    gap: 65%;
+}
+.thank-you-box{
+    justify-items: center;
+    text-align: center;
+    margin: 25%;
+}
+.thank-you-message, .thank-you-message a{
+    width: 30vw;
+    font-size:20px;
+    color:  hsl(0, 0%, 44%);
+    text-decoration: none;
+}
+.thank-you{
+    color: rgb(0, 0, 70);
+}
+
+
+/* =======================
+   RESPONSIVENESS
+   ======================= */
+
+/* Tablet view (≤1024px) */
+@media (max-width: 1024px) {
+    .whole-box {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .steps-box {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      background-size: contain;
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .form-box {
+      width: 90%;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .plans {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .plans-option {
+      width: 45%;
+    }
+  
+    .step-2-footer,
+    .step-3-footer {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+  
+    .next-step {
+      float: none;
+    }
+  
+    .thank-you-message {
+      width: 60%;
+    }
+  }
+  
+  /* Mobile view (≤768px) */
+  @media (max-width: 768px) {
+    body {
+      align-items: flex-start;
+      height: auto;
+    }
+
+    .theme-switcher{
+        margin-top: 14px;
+    }
+  
+    .whole-box {
+      flex-direction: column;
+      width: 95%;
+      box-shadow: none;
+      padding: 10px;
+      background-color: transparent;
+    }
+  
+    .steps-box {
+      background-image: url(../assets/images/bg-sidebar-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  
+    .steps {
+      margin: 10px;
+    }
+  
+    .steps-list {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .step-info-step,
+    .step-info-step-info {
+      display: none; /* hide small text for mobile */
+    }
+  
+    .form-box {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .form-box-header {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .form-box-info {
+      text-align: center;
+      font-size: 16px;
+    }
+  
+    .plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .plans-option {
+      width: 90%;
+    }
+  
+    .plan-duration-container {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
+    }
+  
+    .add-ons-options {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .add-ons-option-1-price {
+      margin-left: 0;
+    }
+  
+    .step-2-footer,
+    .step-3-footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .input{
+        width: 95%;
+    }
+    .thank-you-box {
+      margin: 50px 0;
+    }
+  
+    .thank-you-message {
+      width: 80%;
+      font-size: 18px;
+    }
+  
+    .theme-switcher {
+      margin-left: 0;
+    }
+  }
+  
