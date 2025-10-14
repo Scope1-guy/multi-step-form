@@ -205,6 +205,10 @@ input:checked + .slider::before{
     display: flex;
     gap: 35px;
 }
+.active-plan {
+  border: 2px solid hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
 
 /* THE SWITCH STYLING */
 .plan-duration-switch{
